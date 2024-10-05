@@ -1,10 +1,11 @@
 import { Link } from "expo-router";
+
 import { Text, View } from "react-native";
 
-export default function About() {
+export default function HomeScreen() {
     return (
         <View>
-            <Text>Feeds</Text>
+            <Text className="text-3xl">Feeds</Text>
         
 
         </View>
