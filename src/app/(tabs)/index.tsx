@@ -1,13 +1,18 @@
-import { Link } from "expo-router";
-
-import { Text, View } from "react-native";
+import { FlatList } from "react-native";
+import posts from '@/assets/data/posts.json'
+import PostListItem from "@/src/components/PostListItem";
 
 export default function HomeScreen() {
     return (
-        <View>
-            <Text className="text-3xl">Feeds</Text>
-        
+        <FlatList
+            data={posts}
+            contentContainerStyle={{ gap: 10 }}
+            renderItem={({ item }) => <PostListItem post={item}
 
-        </View>
+            />}
+            showsVerticalScrollIndicator={false}
+        />
+
+
     );
 }
